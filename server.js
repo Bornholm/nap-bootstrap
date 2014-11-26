@@ -1,13 +1,14 @@
 /* jshint node: true */
 var config = require('./lib/util/config');
 var logger = require('./lib/util/logger');
+var api = require('./lib/routes');
 
 logger.info('Starting');
 
+// API Settings
+api.set('json spaces', config.get('app:jsonSpace'));
+
 // Start listening
-
-var api = require('./lib/routes');
-
 api.listen(
   config.get('server:port'),
   config.get('server:host'),

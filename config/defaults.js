@@ -18,3 +18,8 @@ exports.logger = {
   name: 'NAP Bootstrap',
   level: 'info'
 };
+
+// General
+exports.app = {
+	jsonSpace : 2
+}
